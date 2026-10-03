@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="NDrive — one calm workspace for all your files.">
+  <title>NDrive — Your files, in one place</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#files" aria-label="NDrive home">
+        <span class="brand-mark"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 22.7 13.5 8l4.3 8.2L21 10l5 12.7"/><path d="M6 22.7h20"/><circle cx="23" cy="7" r="2"/></svg></span>
+        <span class="brand-name">n<span>drive</span></span>
+      </a>
+      <button class="workspace-switch" id="workspaceSwitch"><span class="workspace-avatar">N</span><span class="workspace-label"><b>My workspace</b><small>Personal space</small></span><span class="chevron" aria-hidden="true"></span></button>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#files" data-page="files"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span>This device</a>
+        <a class="nav-item" href="#cloud" data-page="cloud"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 18h10.2a4.3 4.3 0 0 0 .3-8.6A6.2 6.2 0 0 0 6.3 8.2 4.9 4.9 0 0 0 7.5 18Z"/></svg></span>Cloud files</a>
+        <a class="nav-item" href="#starred" data-page="starred"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg></span>Starred</a>
+        <a class="nav-item" href="#recent" data-page="recent"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>Recent</a>
+        <a class="nav-item" href="#shared" data-page="shared"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5l-8 8"/><path d="M18 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></span>Shared with me</a>
+        <a class="nav-item" href="#trash" data-page="trash"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6m4-6v6M6 7l1 13h10l1-13M9 7V4h6v3"/></svg></span>Trash</a>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="nav-row"><span class="nav-label">YOUR STORAGE</span><button class="tiny-plus" id="addStorage" aria-label="Add storage">+</button></div>
+      <div id="providerNav" class="provider-nav"></div>
+      <button class="connect-card" id="connectStorage"><span class="connect-plus"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><span><b>Connect a storage</b><small>Bring your files together</small></span><span class="connect-arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></button>
+      <div class="sidebar-bottom">
+        <div class="privacy-note"><span class="privacy-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span><b>Your space stays yours</b><small>Files stay on this device in Local mode.</small></span></div>
+        <a class="nav-item settings-link" href="#settings" data-page="settings"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.5.9l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.5-.9l-1.7.7-1.4-2.4 1.4-1.1a7 7 0 0 1 0-1.8l-1.4-1.1 1.4-2.4 1.7.7a8 8 0 0 1 1.5-.9l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.5.9l1.7-.7 1.4 2.4-1.4 1.1a7 7 0 0 1 0 1.8Z"/></svg></span>Settings</a>
+        <div class="user-row"><span class="user-avatar">A</span><span class="user-info"><b>Alex Morgan</b><small>Personal plan</small></span><button class="more-button" aria-label="Account options">···</button></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button id="mobileMenu" class="mobile-menu" aria-label="Open menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        <div class="breadcrumbs" id="breadcrumbs"><span>My files</span></div>
+        <div class="topbar-actions">
+          <label class="search-box"><span class="search-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg></span><input id="searchInput" type="search" placeholder="Search your files" aria-label="Search your files"><kbd>Ctrl K</kbd></label>
+          <button class="icon-button help-button" id="helpButton" aria-label="Help"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.7 9a2.4 2.4 0 1 1 4.3 1.5c-.8 1-2 1.2-2 2.8M12 17h.01"/></svg></button>
+          <button class="user-avatar top-avatar" aria-label="Account">A</button>
+        </div>
+      </header>
+      <div id="pageContent" class="page-content"></div>
+    </main>
+  </div>
+  <div id="modalRoot"></div>
+  <div id="toastRegion" class="toast-region" aria-live="polite"></div>
+  <input id="fileInput" type="file" multiple hidden>
+  <script src="app.js"></script>
+</body>
+</html>

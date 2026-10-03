@@ -1,0 +1,15 @@
+services:
+  ndrive:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4173
+      NDRIVE_SECRETS_FILE: /app/data/provider-secrets.json
+    ports:
+      - "127.0.0.1:${PORT:-4173}:4173"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
