@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">How NDrive handles storage</title>
+  <desc id="desc">The browser talks to the self-hosted NDrive server. NDrive routes uploads to one selected Google Drive account or S3-compatible bucket while credentials remain on the server.</desc>
+  <rect width="1200" height="390" rx="22" fill="#f6f7f3"/>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif">
+    <rect x="52" y="87" width="254" height="218" rx="17" fill="#fff" stroke="#dfe5db"/>
+    <text x="78" y="124" fill="#315c43" font-size="11" font-weight="700" letter-spacing="1.2">YOUR BROWSER</text>
+    <rect x="78" y="150" width="201" height="62" rx="10" fill="#f4f6f0"/><path d="M96 169h22v22H96zM102 164h22v22" fill="none" stroke="#789955" stroke-width="2"/><text x="137" y="176" fill="#20251f" font-size="14" font-weight="650">Local files</text><text x="137" y="195" fill="#687166" font-size="11">Stay in this browser</text>
+    <text x="78" y="243" fill="#20251f" font-size="13" font-weight="650">Choose where each upload goes.</text><text x="78" y="264" fill="#687166" font-size="11">Direct destination or automatic routing.</text>
+    <rect x="392" y="58" width="380" height="275" rx="17" fill="#fff" stroke="#b8c9b7" stroke-width="1.5"/>
+    <rect x="418" y="84" width="40" height="40" rx="12" fill="#315c43"/><path d="m426 111 6-12 4 7 3-5 7 10M426 111h20" fill="none" stroke="#eaf2d8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="473" y="102" fill="#20251f" font-size="18" font-weight="700">NDrive server</text><text x="473" y="121" fill="#687166" font-size="11">Self-hosted on your machine or server</text>
+    <path d="M418 146h328" stroke="#e7ebe5"/>
+    <circle cx="431" cy="174" r="4" fill="#789955"/><text x="446" y="179" fill="#394737" font-size="12">Encrypts Google refresh tokens</text>
+    <circle cx="431" cy="205" r="4" fill="#789955"/><text x="446" y="210" fill="#394737" font-size="12">Stores users and metadata in SQLite</text>
+    <circle cx="431" cy="236" r="4" fill="#789955"/><text x="446" y="241" fill="#394737" font-size="12">Streams file content to its destination</text>
+    <rect x="418" y="269" width="328" height="42" rx="9" fill="#f2f5ed"/><text x="582" y="295" text-anchor="middle" fill="#52674b" font-size="11" font-weight="650">Provider credentials stay server-side</text>
+    <rect x="866" y="60" width="282" height="112" rx="15" fill="#fff" stroke="#dfe5db"/>
+    <rect x="889" y="83" width="46" height="46" rx="13" fill="#edf2ff"/><text x="912" y="112" text-anchor="middle" fill="#4e82ef" font-size="18" font-weight="750">G</text>
+    <text x="950" y="101" fill="#20251f" font-size="14" font-weight="700">Google Drive</text><text x="950" y="122" fill="#687166" font-size="11">Separate account connections</text>
+    <rect x="866" y="211" width="282" height="112" rx="15" fill="#fff" stroke="#dfe5db"/>
+    <rect x="889" y="234" width="46" height="46" rx="13" fill="#fff0e2"/><text x="912" y="263" text-anchor="middle" fill="#dc710f" font-size="14" font-weight="750">S3</text>
+    <text x="950" y="252" fill="#20251f" font-size="14" font-weight="700">S3-compatible</text><text x="950" y="273" fill="#687166" font-size="11">One configured bucket</text>
+    <path d="M306 194h76m390 0h44q24 0 24-24v-53q0-24 24-24h2m-70 101h44q24 0 24 24v53q0 24 24 24h2" fill="none" stroke="#789955" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m373 187 9 7-9 7M854 85l10 8-10 8M854 277l10 8-10 8" fill="none" stroke="#789955" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="344" y="177" fill="#687166" font-size="10" text-anchor="middle">HTTPS</text>
+  </g>
+</svg>

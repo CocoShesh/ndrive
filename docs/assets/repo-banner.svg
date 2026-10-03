@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 420" role="img" aria-labelledby="title desc">
+  <title id="title">NDrive — Your files, in one place</title>
+  <desc id="desc">A calm forest-green banner showing files flowing from a private workspace to connected storage.</desc>
+  <defs>
+  </defs>
+  <rect width="1440" height="420" rx="28" fill="#244a36"/>
+  <path d="M0 355c206-82 364-32 542-105s307-33 442 13 300 44 456-27v184H0Z" fill="#244a36" opacity=".76"/>
+  <path d="M790 210h153m126 0h110" fill="none" stroke="#d8f07d" stroke-linecap="round" stroke-width="2" stroke-dasharray="5 9" opacity=".7"/>
+  <circle cx="943" cy="210" r="4" fill="#d8f07d"/><circle cx="1068" cy="210" r="4" fill="#d8f07d"/>
+  <g transform="translate(664 145)">
+    <rect width="108" height="132" rx="18" fill="#fbfcf8"/>
+    <path d="M30 34h48M30 53h48M30 72h33M30 99h48" stroke="#aab6a5" stroke-linecap="round" stroke-width="5"/>
+    <rect x="17" y="17" width="18" height="21" rx="4" fill="#d8f07d"/><path d="M21 22h10M21 27h7" stroke="#315c43" stroke-linecap="round" stroke-width="2"/>
+  </g>
+  <g transform="translate(960 145)">
+    <rect width="108" height="132" rx="18" fill="#fbfcf8"/>
+    <path d="M26 89V43l28-16 28 16v46H26Z" fill="#eaf1eb" stroke="#315c43" stroke-linejoin="round" stroke-width="3"/>
+    <path d="M42 89V62h24v27M20 96h68" fill="none" stroke="#315c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+  <g transform="translate(1170 145)">
+    <rect width="108" height="132" rx="18" fill="#fbfcf8"/>
+    <path d="M31 73h47a17 17 0 0 0 1-34 24 24 0 0 0-44-2 19 19 0 0 0-4 36Z" fill="#eaf1eb" stroke="#315c43" stroke-linejoin="round" stroke-width="3"/>
+    <path d="M54 49v36m-12-12 12 12 12-12" fill="none" stroke="#315c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+  <g transform="translate(88 83)">
+    <rect width="62" height="62" rx="19" fill="#fbfcf8"/>
+    <path d="m11 43 13-25 8 15 7-12 14 22M11 43h42" fill="none" stroke="#315c43" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <circle cx="47" cy="16" r="3" fill="#789955"/>
+  </g>
+  <text x="88" y="205" fill="#fbfcf8" font-family="Arial,sans-serif" font-size="58" font-weight="700">NDrive</text>
+  <text x="91" y="252" fill="#d8f07d" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="500">Your files, in one private workspace.</text>
+  <text x="91" y="300" fill="#dbe7dc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">Self-hosted storage for local files, Google Drive, and S3-compatible buckets.</text>
+  <text x="718" y="317" fill="#dbe7dc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" text-anchor="middle">YOUR WORKSPACE</text>
+  <text x="1014" y="317" fill="#dbe7dc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" text-anchor="middle">YOUR STORAGE</text>
+  <text x="1224" y="317" fill="#dbe7dc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" text-anchor="middle">YOUR FILES</text>
+</svg>

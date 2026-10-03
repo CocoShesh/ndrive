@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 54" role="img" aria-labelledby="title desc">
+  <title id="title">NDrive capabilities</title>
+  <desc id="desc">Self-hosted, Node.js and SQLite, Google Drive and S3-compatible storage.</desc>
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="600">
+    <rect x="0.5" y="4.5" width="218" height="45" rx="22" fill="#edf3ea" stroke="#d9e4d6"/><circle cx="24" cy="27" r="5" fill="#66854b"/><text x="42" y="32" fill="#315c43">SELF-HOSTED</text>
+    <rect x="235.5" y="4.5" width="220" height="45" rx="22" fill="#f2f4ef" stroke="#e2e6df"/><circle cx="260" cy="27" r="5" fill="#789955"/><text x="278" y="32" fill="#465045">NODE.JS + SQLITE</text>
+    <rect x="472.5" y="4.5" width="228" height="45" rx="22" fill="#edf2ff" stroke="#dbe5ff"/><circle cx="497" cy="27" r="5" fill="#4e82ef"/><text x="515" y="32" fill="#425b88">GOOGLE DRIVE</text>
+    <rect x="717.5" y="4.5" width="292" height="45" rx="22" fill="#fff2e7" stroke="#f2e4d7"/><circle cx="742" cy="27" r="5" fill="#df7b27"/><text x="760" y="32" fill="#7b542f">S3-COMPATIBLE STORAGE</text>
+  </g>
+</svg>
