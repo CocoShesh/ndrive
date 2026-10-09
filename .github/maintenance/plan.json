@@ -1,0 +1,99 @@
+{
+  "start": "2026-10-10",
+  "end": "2026-11-08",
+  "timezone": "Asia/Manila",
+  "reviewed_base": "da3e9ad54e4177b7f8bd5f4ef2b6428cfb96d7a1",
+  "tasks": [
+    {
+      "id": "contributing",
+      "due": "2026-10-11",
+      "title": "Add project-specific contribution and verification guide",
+      "files": {
+        "CONTRIBUTING.md": "# Contributing to ndrive\n\n## Start with the correct application\n\nUse Node.js 22.13+ (Node.js 24 is also suitable). Run `npm ci`, copy `.env.example` to `.env`, generate `CREDENTIAL_ENCRYPTION_KEY` as 64 hexadecimal characters, then run `npm start`. The default URL is http://localhost:4173. The first registered account becomes the owner. Docker Compose mounts `./data` into `/app/data`.\n\n## Keep changes reviewable\n\nDescribe the observed problem and the behavior after your change. Keep one concern per pull request; avoid unrelated dependency updates and formatting churn. Read existing repository instructions before changing source.\n\n## Verification\n\nRun `python3 scripts/source-preflight.py` once that script is available. Before merging auth/storage changes, use a disposable instance and test setup, login, logout, provider connection, and upload/download with non-sensitive fixture files. No automated application test script is declared in package.json.\n\nFor browser changes, check 390 × 844, 768 × 1024 and 1440 × 900 viewports. Look for horizontal overflow, clipped controls, readable text and keyboard focus. Record the actual browser and dimensions; a screenshot alone does not prove the whole journey.\n\nUseful end-to-end check: Create the first owner on a disposable instance, sign out/in, connect a test storage destination, upload a small fixture, list it, download it, and compare the downloaded bytes.\n\n## Handle sensitive data\n\nNever attach SQLite databases, session cookies, OAuth refresh tokens, provider-secrets.json, storage access keys or real personal files. Use disposable storage accounts and fixture files.\n\n## Before opening a pull request\n\n- Explain what changed and why.\n- List commands actually run and their results; state skipped checks explicitly.\n- Include reproducible steps for bug fixes and relevant screenshots for UI changes.\n- Describe migration or rollback needs when changing persisted data.\n"
+      },
+      "source_hashes": {
+        "package.json": "dbf7046fae48532daf060c496de6d2e62e4471d89c6d7bfe2e707342f0b3664f",
+        "server.mjs": "a94bbe0b65ee975014725d24f58dbe71ac598c9a2166422802797dbbf54216c8",
+        "env.mjs": "592ee66f9053b063e94b63c0e0e7b91490e8f13e0d493c9a81f612268031882d",
+        "database.mjs": "9887125f7bcfe81d5534fd93a3a7a4d50ccd8501554f5db08b632b79fac769a0",
+        "providers.mjs": "9a09525abfb896dcff0c2c19f00745944bbfd3b4ddca480345084cafd5906fd3"
+      }
+    },
+    {
+      "id": "bug-report",
+      "due": "2026-10-16",
+      "title": "Add reproducible bug report form with privacy guidance",
+      "files": {
+        ".github/ISSUE_TEMPLATE/bug-report.yml": "name: Bug report\ndescription: Report a reproducible problem in ndrive\ntitle: \"[Bug]: \"\nbody:\n  - type: markdown\n    attributes:\n      value: \"Never attach SQLite databases, session cookies, OAuth refresh tokens, provider-secrets.json, storage access keys or real personal files. Use disposable storage accounts and fixture files.\"\n  - type: textarea\n    id: steps\n    attributes:\n      label: Steps to reproduce\n      description: Include the application entry point and smallest reproducible sequence.\n    validations:\n      required: true\n  - type: textarea\n    id: expected\n    attributes:\n      label: Expected behavior\n    validations:\n      required: true\n  - type: textarea\n    id: actual\n    attributes:\n      label: Actual behavior\n    validations:\n      required: true\n  - type: input\n    id: environment\n    attributes:\n      label: Environment\n      description: Browser/OS, viewport if relevant, runtime version, and commit or deployment.\n    validations:\n      required: true\n  - type: textarea\n    id: evidence\n    attributes:\n      label: Sanitized logs or screenshots\n      description: Remove secrets and personal data. Include a failing request status when relevant.\n"
+      },
+      "source_hashes": {
+        "package.json": "dbf7046fae48532daf060c496de6d2e62e4471d89c6d7bfe2e707342f0b3664f",
+        "server.mjs": "a94bbe0b65ee975014725d24f58dbe71ac598c9a2166422802797dbbf54216c8",
+        "env.mjs": "592ee66f9053b063e94b63c0e0e7b91490e8f13e0d493c9a81f612268031882d",
+        "database.mjs": "9887125f7bcfe81d5534fd93a3a7a4d50ccd8501554f5db08b632b79fac769a0",
+        "providers.mjs": "9a09525abfb896dcff0c2c19f00745944bbfd3b4ddca480345084cafd5906fd3"
+      }
+    },
+    {
+      "id": "pull-request",
+      "due": "2026-10-21",
+      "title": "Add pull request verification and recovery template",
+      "files": {
+        ".github/pull_request_template.md": "## Problem and resulting behavior\n\nExplain the concrete trigger, what happened before, and what happens now.\n\n## Verification\n\nList the commands or manual steps actually run, browser/viewports if relevant, and pass/fail results. Do not check off tests that were not run.\n\nSuggested project checks: Run `python3 scripts/source-preflight.py` once that script is available. Before merging auth/storage changes, use a disposable instance and test setup, login, logout, provider connection, and upload/download with non-sensitive fixture files. No automated application test script is declared in package.json.\n\nRelevant user journey: Create the first owner on a disposable instance, sign out/in, connect a test storage destination, upload a small fixture, list it, download it, and compare the downloaded bytes.\n\n## Risks and recovery\n\nDescribe persisted-data effects, provider/API changes, and rollback steps if applicable.\n\n## Privacy\n\nNever attach SQLite databases, session cookies, OAuth refresh tokens, provider-secrets.json, storage access keys or real personal files. Use disposable storage accounts and fixture files.\n"
+      },
+      "source_hashes": {
+        "package.json": "dbf7046fae48532daf060c496de6d2e62e4471d89c6d7bfe2e707342f0b3664f",
+        "server.mjs": "a94bbe0b65ee975014725d24f58dbe71ac598c9a2166422802797dbbf54216c8",
+        "env.mjs": "592ee66f9053b063e94b63c0e0e7b91490e8f13e0d493c9a81f612268031882d",
+        "database.mjs": "9887125f7bcfe81d5534fd93a3a7a4d50ccd8501554f5db08b632b79fac769a0",
+        "providers.mjs": "9a09525abfb896dcff0c2c19f00745944bbfd3b4ddca480345084cafd5906fd3"
+      }
+    },
+    {
+      "id": "source-preflight",
+      "due": "2026-10-26",
+      "title": "Add dependency-free source syntax checks and CI",
+      "files": {
+        "scripts/source-preflight.py": "\"\"\"Dependency-free source syntax check; does not contact providers or run the app.\"\"\"\nimport ast\nfrom html.parser import HTMLParser\nfrom pathlib import Path\nimport subprocess\nimport tempfile\n\nroot = Path(__file__).resolve().parents[1]\npaths = subprocess.check_output(['git', 'ls-files', '-z'], cwd=root).decode().split('\\0')\ncount = 0\nclass InlineScripts(HTMLParser):\n    def __init__(self):\n        super().__init__(); self.active=False; self.chunks=[]; self.scripts=[]\n    def handle_starttag(self, tag, attrs):\n        attrs=dict(attrs)\n        if tag == 'script':\n            self.active = not attrs.get('src') and attrs.get('type', '').lower() in ('', 'module', 'text/javascript', 'application/javascript')\n            self.chunks=[]\n    def handle_data(self, data):\n        if self.active: self.chunks.append(data)\n    def handle_endtag(self, tag):\n        if tag == 'script' and self.active:\n            self.scripts.append(''.join(self.chunks)); self.active=False\nfor name in paths:\n    path = root / name\n    if not path.is_file(): continue\n    if path.suffix in ('.js', '.mjs', '.cjs'):\n        subprocess.run(['node', '--check', str(path)], check=True); count += 1\n    elif path.suffix == '.py':\n        ast.parse(path.read_text(), filename=name); count += 1\n    elif path.suffix == '.html':\n        parser=InlineScripts(); parser.feed(path.read_text())\n        for script in parser.scripts:\n            with tempfile.TemporaryDirectory() as directory:\n                probe=Path(directory)/'inline.mjs'; probe.write_text(script)\n                subprocess.run(['node', '--check', str(probe)], check=True); count += 1\nif not count: raise SystemExit('No supported source files checked.')\nprint(f'PASS: {count} JavaScript/Python source and inline-script syntax checks. TypeScript, browser behavior, and provider access were not exercised.')\n",
+        ".github/workflows/source-preflight.yml": "name: Source preflight\non:\n  push:\n    paths: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.py', '**/*.html', '.github/workflows/source-preflight.yml']\n  pull_request:\n    paths: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.py', '**/*.html', '.github/workflows/source-preflight.yml']\n  workflow_dispatch:\npermissions:\n  contents: read\nconcurrency:\n  group: source-preflight-${{ github.ref }}\n  cancel-in-progress: true\njobs:\n  syntax:\n    runs-on: ubuntu-latest\n    timeout-minutes: 5\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n        with:\n          node-version: '24'\n      - run: python3 scripts/source-preflight.py\n"
+      },
+      "source_hashes": {
+        "package.json": "dbf7046fae48532daf060c496de6d2e62e4471d89c6d7bfe2e707342f0b3664f",
+        "server.mjs": "a94bbe0b65ee975014725d24f58dbe71ac598c9a2166422802797dbbf54216c8",
+        "env.mjs": "592ee66f9053b063e94b63c0e0e7b91490e8f13e0d493c9a81f612268031882d",
+        "database.mjs": "9887125f7bcfe81d5534fd93a3a7a4d50ccd8501554f5db08b632b79fac769a0",
+        "providers.mjs": "9a09525abfb896dcff0c2c19f00745944bbfd3b4ddca480345084cafd5906fd3"
+      }
+    },
+    {
+      "id": "configuration-check",
+      "due": "2026-10-31",
+      "title": "Add configuration diagnostics without exposing secrets",
+      "files": {
+        "scripts/check-local-setup.py": "\"\"\"Check required environment names without printing credential values.\"\"\"\nimport os\nfrom pathlib import Path\nimport re\nimport sys\n\nREQUIRED = ['CREDENTIAL_ENCRYPTION_KEY']\nENV_FILE = '.env'\nvalues = {}\nif ENV_FILE:\n    path = Path(__file__).resolve().parents[1] / ENV_FILE\n    if path.is_file():\n        for raw in path.read_text().splitlines():\n            match = re.match(r\"^\\s*(?:export\\s+)?([A-Za-z_][A-Za-z0-9_]*)\\s*=\\s*(.*?)\\s*$\", raw)\n            if match:\n                value=match[2].split(' #', 1)[0].strip().strip('\\\"').strip(\"'\")\n                values[match[1]]=value\nvalues.update(os.environ)\nmissing=[]\nfor name in REQUIRED:\n    value=values.get(name, '').strip()\n    if not value or value.lower().startswith(('replace-', 'your-', '<')):\n        missing.append(name)\nif 'CREDENTIAL_ENCRYPTION_KEY' in REQUIRED:\n    if not re.fullmatch(r'[0-9a-fA-F]{64}', values.get('CREDENTIAL_ENCRYPTION_KEY', '')):\n        if 'CREDENTIAL_ENCRYPTION_KEY' not in missing: missing.append('CREDENTIAL_ENCRYPTION_KEY (must be 64 hex characters)')\nif missing:\n    print('Missing or placeholder configuration: ' + ', '.join(missing))\n    sys.exit(1)\nprint('PASS: Required configuration is present. Values were not printed; provider access was not tested.')\n"
+      },
+      "source_hashes": {
+        "package.json": "dbf7046fae48532daf060c496de6d2e62e4471d89c6d7bfe2e707342f0b3664f",
+        "server.mjs": "a94bbe0b65ee975014725d24f58dbe71ac598c9a2166422802797dbbf54216c8",
+        "env.mjs": "592ee66f9053b063e94b63c0e0e7b91490e8f13e0d493c9a81f612268031882d",
+        "database.mjs": "9887125f7bcfe81d5534fd93a3a7a4d50ccd8501554f5db08b632b79fac769a0",
+        "providers.mjs": "9a09525abfb896dcff0c2c19f00745944bbfd3b4ddca480345084cafd5906fd3"
+      }
+    },
+    {
+      "id": "operations",
+      "due": "2026-11-05",
+      "title": "Document project-specific troubleshooting and recovery",
+      "files": {
+        "docs/maintenance/OPERATIONS.md": "# ndrive: troubleshooting and recovery\n\n## Scope\n\nThis guide describes the checked-in application as reviewed on 2026-10-10. Confirm current source and deployment configuration before operating on live data.\n\n## Local setup\n\nUse Node.js 22.13+ (Node.js 24 is also suitable). Run `npm ci`, copy `.env.example` to `.env`, generate `CREDENTIAL_ENCRYPTION_KEY` as 64 hexadecimal characters, then run `npm start`. The default URL is http://localhost:4173. The first registered account becomes the owner. Docker Compose mounts `./data` into `/app/data`.\n\n## Diagnose the failing boundary\n\nNDrive persists accounts, sessions and storage connections in SQLite under ./data by default. Browser-local IndexedDB files are separate from server/provider files. Back up the database and encrypted provider state using a consistent SQLite backup or stop the service before copying the data directory, including relevant WAL files. Keep the encryption key separately and securely: losing it prevents decryption of saved credentials. Restore to an isolated instance and test login plus a fixture download before replacing a working server. Google OAuth redirect URIs must match exactly. Leave new signups disabled unless intentionally enabled.\n\n## Safe verification\n\nRun `python3 scripts/source-preflight.py` once that script is available. Before merging auth/storage changes, use a disposable instance and test setup, login, logout, provider connection, and upload/download with non-sensitive fixture files. No automated application test script is declared in package.json.\n\nRun `python3 scripts/check-local-setup.py` for a local configuration check (or static HTTP check for photobooth). This does not authenticate to remote providers or launch an application workload.\n\n## Reproduce before changing data\n\nCreate the first owner on a disposable instance, sign out/in, connect a test storage destination, upload a small fixture, list it, download it, and compare the downloaded bytes.\n\nUse fixture data and an isolated deployment. Keep the last working revision available. Record the runtime, affected route/provider and error status before retrying. Do not repeatedly retry a rate-limited upstream.\n\n## Information safe to share\n\nNever attach SQLite databases, session cookies, OAuth refresh tokens, provider-secrets.json, storage access keys or real personal files. Use disposable storage accounts and fixture files.\n\n## After a recovery\n\nRecheck the failing journey and one normal journey, confirm that persisted/browser-local data is still available where expected, and document any steps that could not be exercised.\n"
+      },
+      "source_hashes": {
+        "package.json": "dbf7046fae48532daf060c496de6d2e62e4471d89c6d7bfe2e707342f0b3664f",
+        "server.mjs": "a94bbe0b65ee975014725d24f58dbe71ac598c9a2166422802797dbbf54216c8",
+        "env.mjs": "592ee66f9053b063e94b63c0e0e7b91490e8f13e0d493c9a81f612268031882d",
+        "database.mjs": "9887125f7bcfe81d5534fd93a3a7a4d50ccd8501554f5db08b632b79fac769a0",
+        "providers.mjs": "9a09525abfb896dcff0c2c19f00745944bbfd3b4ddca480345084cafd5906fd3"
+      }
+    }
+  ]
+}
